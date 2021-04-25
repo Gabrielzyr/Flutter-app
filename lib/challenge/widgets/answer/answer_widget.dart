@@ -2,38 +2,38 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:nlw5_flutter/core/core.dart';
-import 'package:nlw5_flutter/shared/models/awnser_model.dart';
+import 'package:nlw5_flutter/shared/models/answer_model.dart';
 
-class AwnserWidget extends StatelessWidget {
-  final AwnserModel awnser;
+class AnswerWidget extends StatelessWidget {
+  final AnswerModel answer;
   final bool isSelected;
   final bool disabled;
   final VoidCallback onTap;
 
-  const AwnserWidget({
+  const AnswerWidget({
     Key? key,
-    required this.awnser,
+    required this.answer,
     required this.onTap,
     this.isSelected = false,
     this.disabled = false,
   }) : super(key: key);
 
   Color get _selectedColorRight =>
-      awnser.isRight ? AppColors.darkGreen : AppColors.darkRed;
+      answer.isRight ? AppColors.darkGreen : AppColors.darkRed;
 
   Color get _selectedBorderRight =>
-      awnser.isRight ? AppColors.lightGreen : AppColors.lightRed;
+      answer.isRight ? AppColors.lightGreen : AppColors.lightRed;
 
   Color get _selectedColorCardRight =>
-      awnser.isRight ? AppColors.lightGreen : AppColors.lightRed;
+      answer.isRight ? AppColors.lightGreen : AppColors.lightRed;
 
   Color get _selectedBorderCardRight =>
-      awnser.isRight ? AppColors.green : AppColors.red;
+      answer.isRight ? AppColors.green : AppColors.red;
 
   TextStyle get _selectedTextStyleRight =>
-      awnser.isRight ? AppTextStyles.bodyDarkGreen : AppTextStyles.bodyDarkRed;
+      answer.isRight ? AppTextStyles.bodyDarkGreen : AppTextStyles.bodyDarkRed;
 
-  IconData get _selectedIconRight => awnser.isRight ? Icons.check : Icons.close;
+  IconData get _selectedIconRight => answer.isRight ? Icons.check : Icons.close;
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +57,7 @@ class AwnserWidget extends StatelessWidget {
               children: [
                 Expanded(
                   child: Text(
-                    awnser.title,
+                    answer.title,
                     style: isSelected
                         ? _selectedTextStyleRight
                         : AppTextStyles.body,

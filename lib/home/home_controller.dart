@@ -1,7 +1,7 @@
 import 'package:nlw5_flutter/core/app_images.dart';
 import 'package:nlw5_flutter/home/home_repository.dart';
 import 'package:nlw5_flutter/home/home_state.dart';
-import 'package:nlw5_flutter/shared/models/awnser_model.dart';
+import 'package:nlw5_flutter/shared/models/answer_model.dart';
 import 'package:nlw5_flutter/shared/models/question_model.dart';
 import 'package:nlw5_flutter/shared/models/quiz_model.dart';
 import 'package:nlw5_flutter/shared/models/user_model.dart';

@@ -59,9 +59,9 @@ class _HomePageState extends State<HomePage> {
                 children: controller.quizzes!
                     .map((e) => QuizCardWidget(
                           title: e.title,
-                          percent: e.questionAwnsered / e.questions.length,
+                          percent: e.questionAnswered / e.questions.length,
                           completed:
-                              "${e.questionAwnsered}/${e.questions.length}",
+                              "${e.questionAnswered}/${e.questions.length}",
                           onTap: () {
                             Navigator.push(
                               context,
